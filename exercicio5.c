@@ -3,8 +3,7 @@
 
 int main(){
 
-  int mod, valorTotal;
-  float merc, frete, desp, venda;
+float merc, frete, desp, venda, custo, perc;
 
   printf("Digite o custo da mercadoria: ");
   scanf("%f", &merc);
@@ -15,13 +14,13 @@ int main(){
   printf("\nDigite a despesas eventuais: ");
   scanf("%f", &desp);
 
-  valorTotal = merc + frete + desp;
-
   printf("\nQual sera o valor da venda: ");
   scanf("%f", &venda);
 
- mod = valorTotal % venda;
+  custo = merc + frete + desp;
 
-printf("\nPercentagem de lucro da mercadoria: %d",mod);
+  perc = (venda - custo) * 100 / custo;
+
+  printf("\nPercentagem de lucro da mercadoria: %.2f",preco);
 
 }
